@@ -1,0 +1,37 @@
+using System;
+
+namespace Fibonacci
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Fibonacci(3));
+            Console.WriteLine(Fibonacci(8));
+            Console.WriteLine(Fibonacci(10));
+            /*
+             * 
+                The first few numbers of the Fibonacci sequence are: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+                Because one number is defined by the numbers before it, this sets up a perfect opportunity for using 
+                recursion.
+
+                Your mission, should you choose to accept it, is to create a method called Fibonacci, which takes in a 
+                number and returns that number of the Fibonacci sequence. So if someone calls Fibonacci(3), it 
+                would return the 3rd number in the Fibonacci sequence, which is 2. If someone calls Fibonacci(8), it 
+                would return 21.
+                
+                Hint #1: For every other item, how is it defined in terms of the numbers before it? Can you come up 
+                with an equation or formula that calls the Fibonacci method again?
+            */
+
+        }
+
+        public static int Fibonacci(int sequenceValue)
+        {
+            if (sequenceValue == 1 || sequenceValue == 2) //
+                return 1;
+            else
+                return Fibonacci(sequenceValue - 2) + Fibonacci(sequenceValue - 1);// 2 - 1 
+        }
+    }
+}
